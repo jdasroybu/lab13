@@ -16,15 +16,10 @@ public class lab13Test {
 
     @BeforeEach
     public void setUp() throws Exception {
-        // instantiate an instance of lab13
         lab = new lab13();
         
-        // read the input values and populate the ArrayList<Integer> in the lab13 class
         lab.readData(inputFilename);
         
-        // testData.get(0) has the expected results for getResult1()
-        // testData.get(1) has the expected results for getResult2()
-        // testData.get(2) has the expected results for getResult3()
         ArrayList<ArrayList<Integer>> testData = new ArrayList<>();
         for(int i = 0; i < 3; i++) {
             testData.add(new ArrayList<Integer>());
@@ -50,19 +45,16 @@ public class lab13Test {
             }
             input.close();
             
-            // Populate expectedResult1
             expectedResult1 = new Integer[testData.get(0).size()];
             for(int i = 0; i < testData.get(0).size(); i++) {
                 expectedResult1[i] = testData.get(0).get(i);
             }
             
-            // Populate expectedResult2
             expectedResult2 = new Integer[testData.get(1).size()];
             for(int i = 0; i < testData.get(1).size(); i++) {
                 expectedResult2[i] = testData.get(1).get(i);
             }
-            
-            // Populate expectedResult3
+
             expectedResult3 = new Integer[testData.get(2).size()];
             for(int i = 0; i < testData.get(2).size(); i++) {
                 expectedResult3[i] = testData.get(2).get(i);
